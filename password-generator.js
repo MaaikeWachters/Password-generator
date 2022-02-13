@@ -1,6 +1,5 @@
 // TO DO
 // on click copy password; hint: use input type text to display the password options
-// choose length of password
 
 let characters = [
   "0",
@@ -111,28 +110,48 @@ function generatePasswords() {
 
   for (let i = 0; i < passwordLength; i++) {
     password1 += characters[Math.floor(Math.random() * characters.length)];
-    console.log(password1);
   }
   buttonEl1.textContent = password1;
 
   let password2 = "";
   for (let i = 0; i < passwordLength; i++) {
     password2 += characters[Math.floor(Math.random() * characters.length)];
-    console.log(password2);
   }
   buttonEl2.textContent = password2;
 
   let password3 = "";
   for (let i = 0; i < passwordLength; i++) {
     password3 += characters[Math.floor(Math.random() * characters.length)];
-    console.log(password3);
   }
   buttonEl3.textContent = password3;
 
   let password4 = "";
   for (let i = 0; i < passwordLength; i++) {
     password4 += characters[Math.floor(Math.random() * characters.length)];
-    console.log(password4);
   }
   buttonEl4.textContent = password4;
+}
+
+function copyPassword1() {
+  const cb = navigator.clipboard;
+
+  cb.writeText(buttonEl1.innerText).then(() => alert("Text copied"));
+}
+
+function copyPassword2() {
+  const cb = navigator.clipboard;
+
+  cb.writeText(buttonEl2.innerText).then(() => alert("Text copied"));
+}
+
+function copyPassword3() {
+  const cb = navigator.clipboard;
+
+  cb.writeText(buttonEl3.innerText).then(() => alert("Text copied"));
+}
+
+function copyPassword4() {
+  const cb = navigator.clipboard;
+
+  cb.writeText(buttonEl4.innerText).then(() => alert("Text copied"));
 }
