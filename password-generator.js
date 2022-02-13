@@ -99,31 +99,38 @@ let buttonEl1 = document.getElementById("button-el-1");
 let buttonEl2 = document.getElementById("button-el-2");
 let buttonEl3 = document.getElementById("button-el-3");
 let buttonEl4 = document.getElementById("button-el-4");
+let passwordLength = document.getElementById("password-length");
+
+function getPasswordLength() {
+  passwordLength = passwordLength.value;
+}
 
 function generatePasswords() {
+  getPasswordLength();
   let password1 = "";
-  for (let i = 0; i < 24; i++) {
+
+  for (let i = 0; i < passwordLength; i++) {
     password1 += characters[Math.floor(Math.random() * characters.length)];
     console.log(password1);
   }
   buttonEl1.textContent = password1;
 
   let password2 = "";
-  for (let i = 0; i < 24; i++) {
+  for (let i = 0; i < passwordLength; i++) {
     password2 += characters[Math.floor(Math.random() * characters.length)];
     console.log(password2);
   }
   buttonEl2.textContent = password2;
 
   let password3 = "";
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < passwordLength; i++) {
     password3 += characters[Math.floor(Math.random() * characters.length)];
     console.log(password3);
   }
   buttonEl3.textContent = password3;
 
   let password4 = "";
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < passwordLength; i++) {
     password4 += characters[Math.floor(Math.random() * characters.length)];
     console.log(password4);
   }
