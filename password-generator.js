@@ -1,6 +1,3 @@
-// TO DO
-// on click copy password; hint: use input type text to display the password options
-
 let characters = [
   "0",
   "1",
@@ -94,6 +91,40 @@ let characters = [
   "?",
   "/",
 ];
+/*
+let buttonEl = document.getElementById("button-el");
+let passwordLength = document.getElementById("password-length");
+
+passwordLength = passwordLength.value;
+
+function fillPassword() {
+  console.log(passwordLength);
+}
+
+function fillPassword() {
+  for (let i = 0; i < 4; i++) {
+    generatePasswords();
+  }
+}
+
+function generatePasswords() {
+
+  let password = "";
+
+  for (let i = 0; i < passwordLength; i++) {
+    password += characters[Math.floor(Math.random() * characters.length)];
+  }
+  buttonEl.textContent = password;
+}
+
+function copyPassword() {
+  const cb = navigator.clipboard;
+
+  cb.writeText(buttonEl.innerText).then(() => alert("Text copied"));
+}
+
+*/
+
 let buttonEl1 = document.getElementById("button-el-1");
 let buttonEl2 = document.getElementById("button-el-2");
 let buttonEl3 = document.getElementById("button-el-3");
@@ -102,6 +133,7 @@ let passwordLength = document.getElementById("password-length");
 
 function getPasswordLength() {
   passwordLength = passwordLength.value;
+  console.log(passwordLength);
 }
 
 function generatePasswords() {
@@ -112,7 +144,8 @@ function generatePasswords() {
     password1 += characters[Math.floor(Math.random() * characters.length)];
   }
   buttonEl1.textContent = password1;
-
+}
+/*
   let password2 = "";
   for (let i = 0; i < passwordLength; i++) {
     password2 += characters[Math.floor(Math.random() * characters.length)];
@@ -155,3 +188,4 @@ function copyPassword4() {
 
   cb.writeText(buttonEl4.innerText).then(() => alert("Text copied"));
 }
+*/
